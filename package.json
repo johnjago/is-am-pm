@@ -1,0 +1,26 @@
+{
+  "name": "is-am-pm",
+  "version": "1.0.0",
+  "description": "Check whether it's a.m. or p.m. in local time",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnjago/is-am-pm.git"
+  },
+  "keywords": [
+    "time"
+  ],
+  "author": "John Jago",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnjago/is-am-pm/issues"
+  },
+  "homepage": "https://github.com/johnjago/is-am-pm#readme",
+  "devDependencies": {
+    "typescript": "^3.7.4"
+  }
+}
