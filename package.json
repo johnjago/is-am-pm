@@ -2,10 +2,12 @@
   "name": "is-am-pm",
   "version": "1.0.0",
   "description": "Check whether it's a.m. or p.m. in local time",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tsc && ava",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,8 @@
   },
   "homepage": "https://github.com/johnjago/is-am-pm#readme",
   "devDependencies": {
+    "@types/node": "^13.1.0",
+    "ava": "^2.4.0",
     "typescript": "^3.7.4"
   }
 }
