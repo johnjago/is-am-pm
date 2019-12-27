@@ -1,18 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function dateIsAm(d) {
-    return false;
+function isAM(given) {
+    return checkAm(given instanceof Date ? given.getHours() : given);
 }
-exports.dateIsAm = dateIsAm;
-function hourIsAm(h) {
-    return false;
+exports.isAM = isAM;
+function isPM(given) {
+    return !isAM(given);
 }
-exports.hourIsAm = hourIsAm;
-function dateIsPm(d) {
-    return false;
+exports.isPM = isPM;
+function checkAm(hour) {
+    return hour < 12 ? true : false;
 }
-exports.dateIsPm = dateIsPm;
-function hourIsPm(h) {
-    return false;
-}
-exports.hourIsPm = hourIsPm;

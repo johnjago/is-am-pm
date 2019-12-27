@@ -1,43 +1,43 @@
 import test from 'ava';
-import { dateIsAm, hourIsAm, dateIsPm, hourIsPm } from './index'
+import { isAM, isPM } from './index'
 
-const dateAm: string = '1995-12-17T03:24:00';
-const datePm: string = '1995-12-17T13:24:00';
-const hourAm: number = 3;
-const hourPm: number = 13;
+const dateAM: Date = new Date('1995-12-17T03:24:00');
+const datePM: Date = new Date('1995-12-17T13:24:00');
+const hourAM: number = 0;
+const hourPM: number = 12;
 
 // AM
 
-test(`dateIsAm is true for ${dateAm}`, t => {
-  t.is(dateIsAm(new Date(dateAm)), true);
+test(`isAM is true for ${dateAM}`, t => {
+  t.is(isAM(dateAM), true);
 });
 
-test(`dateIsAm is false for ${datePm}`, t => {
-  t.is(dateIsAm(new Date(datePm)), false);
+test(`isAM is false for ${datePM}`, t => {
+  t.is(isAM(datePM), false);
 });
 
-test(`hourIsAm is true for ${hourAm}`, t => {
-  t.is(hourIsAm(hourAm), true);
+test(`isAM is true for ${hourAM}`, t => {
+  t.is(isAM(hourAM), true);
 });
 
-test(`hourIsAm is false for ${hourPm}`, t => {
-  t.is(hourIsAm(hourPm), false);
+test(`isAM is false for ${hourPM}`, t => {
+  t.is(isAM(hourPM), false);
 });
 
 // PM
 
-test(`dateIsPm is true for ${datePm}`, t => {
-  t.is(dateIsPm(new Date(datePm)), true);
+test(`isPM is true for ${datePM}`, t => {
+  t.is(isPM(datePM), true);
 });
 
-test(`dateIsPm is false for ${dateAm}`, t => {
-  t.is(dateIsPm(new Date(dateAm)), false);
+test(`isPM is false for ${dateAM}`, t => {
+  t.is(isPM(dateAM), false);
 });
 
-test(`hourIsPm is true for ${hourPm}`, t => {
-  t.is(hourIsPm(hourPm), true);
+test(`isPM is true for ${hourPM}`, t => {
+  t.is(isPM(hourPM), true);
 });
 
-test(`hourIsPm is false for ${hourAm}`, t => {
-  t.is(hourIsPm(hourAm), false);
+test(`isPM is false for ${hourAM}`, t => {
+  t.is(isPM(hourAM), false);
 });
